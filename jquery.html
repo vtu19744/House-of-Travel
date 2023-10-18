@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+      
+      $("p").hide();
+
+      
+      $(".destination").hover(function() {
+        $(this).find('p').slideToggle();
+      });
+
+      
+      $(".destination").hover(
+        function() {
+          $(this).css('border-color', 'orange');
+        },
+        function() {
+          $(this).css('border-color', 'grey');
+        }
+      );
+    });
+
+    $(document).ready(function() {
+      
+      $(".destination").hide();
+  
+      
+      $(".header").mouseenter(function() {
+        $(this).find('.destination').slideDown("slow");
+      });
+  
+    });  
+    
+    $(document).ready(function() {
+      $('.destination').on('click', function() {
+        var destination = $(this).data('location');
+        $('#destinationName').text(destination);
+      });
+    });
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: darkslategray;
+      
+    }
+    .header {
+      background-color: darkslategray;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    .destination {
+      border: 1px solid grey;
+      margin: 20px;
+      padding: 10px;
+      display: inline-block;
+      width: 300px;
+      vertical-align: top;
+      color: aliceblue;
+    }
+    .destination img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Popular Destinations In India</h1>
+
+    <div id="selectedDestination">
+      <h2>Selected Destination: <span id="destinationName"></span></h2>
+    </div>
+
+  <div class="destination" id="destination1" data-location="Tajmahal, New Delhi">
+    <img src="taj.jpg" alt="tajmahal">
+    <h2>Taj Mahal, Agra</h2>
+    <p>Majestically located on the banks of Yamuna River, this wonder of the world was built by the Mughal Emperor Shah Jahan as a memorial for his beloved wife Mumtaz Mahal.</p>
+  </div>
+  <div class="destination" id="destination2" data-location="Red Fort, New Delhi">
+    <img src="redfort.jpg" alt="redfort">
+    <h2>Redfort, NewDelhi</h2>
+    <p>Located in Chandni Chowk Old Delhi, this red sandstone structure was constructed under the reign of Mughal emperor Shah Jahan for protection against invaders. It is known for its intricate Mughal architecture and floral designs.</p>
+  </div>
+  <div class="destination" id="destination3" data-location="Golden Temple, Amristar">
+    <img src="goldentemple.jpg" alt="goldentemple">
+    <h2>Golden Temple, Amristar</h2>
+    <p>Also known as Sri Harmandir Sahib, Golden Temple is considered to be the most important pilgrimage site amongst Sikhs and will leave you in awe with its jaw-dropping gold and marble edifice.</p>
+  </div>
+  <div class="destination" id="destination4" data-location="India Gate, Mumbai">
+    <img src="indiagate.jpeg" alt="indiagate">
+    <h2>Gateway Of India, Mumbai</h2>
+    <p>Located on the waterfront in Colaba, South Mumbai, this arch monument is Mumbais prime landmark. It was built by the British to welcome King George V and Queen Mary during a royal visit in 1911.</p>
+  </div>
+  <div class="destination" id="destination9" data-location="Victoria Memorial, Kolkata">
+    <img src="victoria.jpg" alt="victoriamemorial">
+    <h2>Victoria Memorial, Kolkata</h2>
+    <p>A sprawling marble palatial monument dedicated to the memory of Britans Queen Victoria, this is one of Kolkatas most famous landmarks and was built using the same Makrana Marble as Taj Mahal.</p>
+  </div>
+  <div class="destination" id="destination11" data-location="Mysore Palace, Karnataka">
+    <img src="Mysore.jpeg" alt="Mysorepalace">
+    <h2>Mysore Palace, Karnataka</h2>
+    <p>The official residence of the erstwhile royal family of Mysore, Mysore Palace is an architectural masterpiece showcasing a blend of Hindu, Muslim, Rajput and Gothic styles.</p>
+  </div>
+  <div class="destination" id="destination12" data-location="Thiruvallur Statue, Kannyakumari">
+    <img src="thiru.jpg" alt="Thiruvallurstatue">
+    <h2>Thiruvallur Statue, Kannyakumari</h2>
+    <p>Standing at over 40 metres on a small island rock island, the Thiruvalluvar Statue is a stone sculpture of the Tamil poet and philosopher, Valluvar.</p>
+  </div>
+</div>
+</body>
+</html>

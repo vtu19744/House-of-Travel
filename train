@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>my webpage</title>
+    </head>
+    <body>
+        <h>my webpage</h>
+        <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#"> about us</a></li>
+            <li><a href="#">other</a></li>
+            </ul>
+            </nav>
+            <footer>
+                <p>all rights reserved</p>
+            </footer>
+            </body>
+            </html>
